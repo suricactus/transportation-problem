@@ -34,8 +34,8 @@ Site.prototype = {
 
         this.generateTableContent();
 
-        this.$matrixTable.find( 'input' )
-            .val( 10 )
+//        this.$matrixTable.find( 'input' )
+//            .val( 10 )
     },
     initBindings: function () {
         var context = this;
