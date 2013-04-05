@@ -127,6 +127,9 @@ Site.prototype = {
             if ( $( this )
                 .is( context.$buttonReset ) ) {
                 inputs.val( '' );
+                context.$matrixPurchasersSum
+                    .add(context.$matrixSourcesSum)
+                    .html(0);
             }
 
             inputs.prop( 'disabled', false );
