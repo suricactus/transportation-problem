@@ -195,13 +195,13 @@ Site.prototype = {
 //            [2, 5, 4],
 //            [0, 0, 0]
 //        ] );
-        var matrix = new Matrix( [30, 20, 10], [18, 22, 20] );
-
-        matrix.setMatrix( [
-            [456, 123, 56],
-            [9815, 3165, 489],
-            [23, 156, 987]
-        ] );
+//        var matrix = new Matrix( [30, 20, 10], [18, 22, 20] );
+//
+//        matrix.setMatrix( [
+//            [456, 123, 56],
+//            [9815, 3165, 489],
+//            [23, 156, 987]
+//        ] );
 
         if ( matrix.solve() === true ) {
             var loadedMatrixes = matrix.getLoadedMatrixes();
