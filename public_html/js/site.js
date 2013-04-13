@@ -345,12 +345,12 @@ Site.prototype = {
 
             html += (k === highlightedIndex || loops[k].elements.length === 0) ? '<li style="color: red">' : '<li>';
 
-            html += this.toUnicodeSubscript( '&#0948;&#8333;', loops[k].i, ',', loops[k].j, '&#8334; = ' );
+            html += this.toUnicodeSubscript( '&#0948;&#8333;', loops[k].i + 1, ',', loops[k].j + 1, '&#8334; = ' );
 
             for (var l = 0; l < loops[k].elements.length; l++) {
                 var sign = (l % 2 !== 0) ? ' + ' : ' - ';
 
-                html += this.toUnicodeSubscript( sign, 'c&#8333;', loops[k].elements[l].i, ',', loops[k].elements[l].j, '&#8334;' );
+                html += this.toUnicodeSubscript( sign, 'c&#8333;', loops[k].elements[l].i + 1, ',', loops[k].elements[l].j + 1, '&#8334;' );
 
                 strSecondLine += sign + matrix.getValue( loops[k].elements[l].i, loops[k].elements[l].j );
             }
