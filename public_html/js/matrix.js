@@ -177,6 +177,7 @@ function Matrix ( sources, purchasers ) {
             hasBeenReloaded: false
         };
         var zMin = 0;
+        var maxPositiveLoopValue = 0;
 
         for (var i = 0; i < _sources.length; i++) {
             for (var j = 0; j < _purchasers.length; j++) {
@@ -192,7 +193,9 @@ function Matrix ( sources, purchasers ) {
                             j: j,
                             value: value
                         } );
-                        if ( value > 0 ) {
+                        if ( maxPositiveLoopValue < value ) {
+                            maxPositiveLoopValue = value;
+
                             $.extend( data, _getLoopData( loadedMatrix, elements ) );
                             data.positiveLoopIndex = loops.length - 1;
                             data.hasBeenReloaded = true;
